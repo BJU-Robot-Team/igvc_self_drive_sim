@@ -31,7 +31,7 @@
       <material>Gazebo/White</material>
 
       <sensor type="camera" name="${name}_camera">
-        <update_rate>30.0</update_rate>
+        <update_rate>01.0</update_rate>
 
         <camera name="cam">
           <horizontal_fov>1.04</horizontal_fov>
