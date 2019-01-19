@@ -41,8 +41,8 @@
         <bodyName>${name}</bodyName>
         <topicName>fix</topicName>
         <frameId>world</frameId>
-        <referenceLatitude>42.679292</referenceLatitude>
-        <referenceLongitude>-83.195249</referenceLongitude>
+        <referenceLatitude>34.868835</referenceLatitude>
+        <referenceLongitude>-82.363701</referenceLongitude>
         <referenceHeading>90</referenceHeading>
         <velocityTopicName>fix_velocity</velocityTopicName>
         <drift>0.0 0.0 0.0</drift>
