@@ -4,17 +4,17 @@
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
   <!-- Camera -->
-  <!-- <xacro:include filename="$(find igvc_self_drive_description)/urdf/sensors/camera.urdf.xacro" />
-  <xacro:camera_sim name="camera_front" parent="base_footprint" >
+  <xacro:include filename="$(find hector_sensors_description)/urdf/generic_camera.urdf.xacro" />
+  <xacro:generic_camera name="camera_front" parent="base_footprint" ros_topic="/img" cam_info_topic="/cameraInfo" update_rate="10" res_x="640" res_y="480" image_format="raw" hfov="30">
     <origin xyz="1.75 0 2.1" rpy="0 0.55 0" />
-  </xacro:camera_sim> -->
+  </xacro:generic_camera>
 
   <!-- LIDAR -->
-  <!-- <xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />
+  <xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />
   <xacro:include filename="$(find hector_sensors_description)/urdf/vlp16.urdf.xacro" />
   <xacro:vlp16 name="lidar" parent="base_footprint" ros_topic="/lidar">
     <origin xyz="2.75 0 0.85" rpy="0 0 0" />
-  </xacro:vlp16> -->
+  </xacro:vlp16>
 
   <!-- GPS -->
   <xacro:include filename="$(find igvc_self_drive_description)/urdf/sensors/gps.urdf.xacro" />
