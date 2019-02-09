@@ -5,7 +5,7 @@
 
   <!-- Camera -->
   <xacro:include filename="$(find hector_sensors_description)/urdf/generic_camera.urdf.xacro" />
-  <xacro:generic_camera name="camera_front" parent="base_footprint" ros_topic="/img" cam_info_topic="/cameraInfo" update_rate="10" res_x="640" res_y="480" image_format="raw" hfov="30">
+  <xacro:generic_camera name="camera_front" parent="base_footprint" ros_topic="/img" cam_info_topic="/cameraInfo" update_rate="10" res_x="640" res_y="480" image_format="R8G8B8" hfov="30">
     <origin xyz="1.75 0 2.1" rpy="0 0.55 0" />
   </xacro:generic_camera>
 
