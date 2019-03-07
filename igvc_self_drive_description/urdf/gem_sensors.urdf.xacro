@@ -9,6 +9,12 @@
     <origin xyz="1.75 0 2.1" rpy="0 0.55 0" />
   </xacro:generic_camera>
 
+  <!-- Camera -->
+   <xacro:generic_camera name="camera_side" parent="base_footprint" ros_topic="/stop_camera" cam_info_topic="/cameraInfoStop" update_rate="10" res_x="640" res_y="480" image_format="R8G8B8" hfov="30">
+    <origin xyz="2 -.5 2.1" rpy="0 0 0" />
+  </xacro:generic_camera>
+
+
   <!-- LIDAR -->
   <xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />
   <xacro:include filename="$(find hector_sensors_description)/urdf/vlp16.urdf.xacro" />
@@ -21,6 +27,15 @@
   <xacro:gps name="gps" parent="base_footprint" >
     <origin xyz="0.8 0 2.35" rpy="0 0 0" />
   </xacro:gps>
+
+  <!-- Realsense d435 -->
+  <!--     <xacro:macro name="realsense_d435_camera_gazebo_plugin_macro" params="name parent image_topic depth_points_topic min_range max_range update_rate"> -->
+  <xacro:include filename="$(find hector_sensors_description)/urdf/realsense_d435_camera.urdf.xacro" />
+  <xacro:realsense_d435_camera_model name="realsense" parent="base_footprint">
+      <origin xyz="2 0 1" rpy="0 0 0" />
+  </xacro:realsense_d435_camera_model>
+  <xacro:realsense_d435_camera_gazebo_plugin_macro parent="base_footprint" name="realsense" image_topic="/realsenseCam" depth_points_topic="/realsensepoints" min_range="0.01" max_range="100" update_rate="3" >
+  </xacro:realsense_d435_camera_gazebo_plugin_macro>
 
   <!-- IMU -->
   <xacro:include filename="$(find sensor_sim_gazebo)/urdf/imu.xacro" />
