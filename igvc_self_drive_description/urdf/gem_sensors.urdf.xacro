@@ -18,7 +18,7 @@
   <!-- LIDAR -->
   <xacro:include filename="$(find hector_xacro_tools)/urdf/inertia_tensors.urdf.xacro" />
   <xacro:include filename="$(find hector_sensors_description)/urdf/vlp16.urdf.xacro" />
-  <xacro:vlp16 name="lidar" parent="base_footprint" ros_topic="/lidar">
+  <xacro:vlp16 name="lidar" parent="base_footprint" ros_topic="/gazebo_lidar">
     <origin xyz="2.75 0 0.85" rpy="0 0 0" />
   </xacro:vlp16>
 
