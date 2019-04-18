@@ -40,7 +40,7 @@
         <updateRate>10.0</updateRate>
         <bodyName>${name}</bodyName>
         <topicName>fix</topicName>
-        <frameId>world</frameId>
+        <frameId>veh_near_field</frameId>
         <referenceLatitude>34.868835</referenceLatitude>
         <referenceLongitude>-82.363701</referenceLongitude>
         <referenceHeading>90</referenceHeading>
